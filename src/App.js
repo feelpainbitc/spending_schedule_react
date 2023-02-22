@@ -17,6 +17,11 @@ const costs=[
     date: new Date(2022,9,20),
     description: "Hoodie",
     amount: 80
+  },
+  {
+    date: new Date(2021,7,30),
+    description:"Iphone X",
+    amount: 800
   }
 ];
 
@@ -32,6 +37,9 @@ const costs=[
          <CostItem date={costs[2].date}
          description={costs[2].description}
          amount={costs[2].amount}></CostItem>
+         <CostItem date={costs[3].date}
+         description={costs[3].description}
+         amount={costs[3].amount}></CostItem>
     </div>
   );
 }
