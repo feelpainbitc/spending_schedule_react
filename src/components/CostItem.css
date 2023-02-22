@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 30px;
+    height: 100px;
     padding: 0.5rem;
     margin: 1rem 0;
     background-color: #bd8025;
