@@ -8,6 +8,7 @@
     margin: 1rem 0;
     background-color: #bd8025;
     border-radius: 10px;
+    box-shadow: 8px 4px 4px black;
   }
   
   .cost-item__description {
