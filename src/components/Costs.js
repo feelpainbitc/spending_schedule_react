@@ -19,6 +19,7 @@ return(
         <CostsFilter year={selectedYear} onChangeYear={yearChangeHandler}/>
         {props.costs.map((cost)=>(
         <CostItem
+            key={cost.id}
             description={cost.description}
             date={cost.date}
             amount={cost.amount}
