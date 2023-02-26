@@ -6,7 +6,7 @@ function App() {
 const costs=[
   {
     id:'c1',
-    date: new Date(2022,1,12),
+    date: new Date(2023,1,12),
     description: "Pants",
     amount: 12
   },
