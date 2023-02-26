@@ -36,6 +36,13 @@
     padding: 0.5rem;
     border-radius: 12px;
   }
+
+  button{
+    border-radius: 15px;
+    background: yellowgreen;
+    width: 100px;
+    height: 30px;
+  }
   
   @media (min-width: 580px) {
     .cost-item__description {
