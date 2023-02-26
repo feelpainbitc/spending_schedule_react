@@ -1,6 +1,6 @@
 import Costs from "./components/Costs";
 import NewCost from "./components/NewCost/NewCost";
-import React, {useState} from 'react'
+import React, {useState} from "react";
 
 const INITIAL_COSTS=[
   {
@@ -30,24 +30,23 @@ const INITIAL_COSTS=[
 ];
 
 
-function App() {
+const App=()=> {
 
   const [costs,setCosts]=useState(INITIAL_COSTS);
 
 
 
 
-const addCostHandler=(cost)=>{
-  setCosts(
-    prevCosts=>{
-      return[cost,...prevCosts]
-    }
-  );
-};
+  const addCostHandler=(cost)=>
+  {
+    setCosts(prevCosts=>{
+        return[cost,...prevCosts]
+      });
+  };
 
   return (
     <div>
-    <NewCost onAddCost={addCostHandler}/>
+    <NewCost onAddCost={addCostHandler} />
     <Costs costs={costs}></Costs>
     </div>
   );

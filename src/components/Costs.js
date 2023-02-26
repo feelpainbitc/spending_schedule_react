@@ -19,8 +19,8 @@ return(
         <CostsFilter year={selectedYear} onChangeYear={yearChangeHandler}/>
         {props.costs.map((cost)=>(
         <CostItem
-            date={cost.date}
             description={cost.description}
+            date={cost.date}
             amount={cost.amount}
         />))}
     </Card>

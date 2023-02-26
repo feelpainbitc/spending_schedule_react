@@ -3,58 +3,34 @@ import React,{useState} from "react";
 
 function CostForm(props){
 
-   const[inputName,setInputName]=useState('');
-    const[inputAmount,setInputAmount]=useState('');
-    const[inputDate,setInputDate]=useState('');
+   const[inputDescription,setInputDescription]=useState("");
+    const[inputAmount,setInputAmount]=useState("");
+    const[inputDate,setInputDate]=useState("");
 
 
-/*     const [userInput,setUserInput]=useState({
-        name:'',
-        amount:'',
-        date:''
-    }); */
 
-
-    const nameChangeHandler=(event)=>{
-        setInputName(event.target.value); 
-
- /*        setUserInput((previousState)=>{
-            return{
-                ...previousState,
-                name:event.target.value
-            }
-        }) */
+    const descriptionChangeHandler=(event)=>{
+        setInputDescription(event.target.value); 
     };
       
     const amountChangeHandler=(event)=>{
         setInputAmount(event.target.value);
- /*        setUserInput((previousState)=>{
-            return{
-                ...previousState,
-                amount:event.target.value
-            }
-        }) */
     };
     const dateChangeHandler=(event)=>{
         setInputDate(event.target.value);
-/*         setUserInput((previousState)=>{
-            return{
-                ...previousState,
-                date:event.target.value
-            }
-        }) */
     };
 
     const submitHandler=(event)=>{
         event.preventDefault();
 
         const costData={
-            name:inputName,
+            description:inputDescription,
             amount:inputAmount,
             date:new Date(inputDate)
         };
+        console.log(costData);
         props.onSaveCostData(costData);
-        setInputName('');
+        setInputDescription('');
         setInputAmount('');
         setInputDate('');
     };
@@ -64,7 +40,7 @@ function CostForm(props){
             <div className="new-cost__controls">
                 <div className="new-cost__control">
                     <label>Name</label>
-                    <input type='text' value={inputName} onChange={nameChangeHandler}/>
+                    <input type='text' value={inputDescription} onChange={descriptionChangeHandler}/>
                 </div>
                 <div className="new-cost__control">
                     <label>Cost</label>
