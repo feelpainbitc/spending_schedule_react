@@ -14,22 +14,27 @@ function Costs(props){
 
     const filteredCosts=props.costs.filter(cost=>
         {
-            return cost.date.getFullYear().toString()==selectedYear;
+            return cost.date.getFullYear().toString()===selectedYear;
             
         });
+
+    let costsContent=<p>No spending money this year</p>;
     
+    if(filteredCosts.length>0){
+        costsContent=filteredCosts.map((cost)=>(
+        <CostItem
+        key={cost.id}
+        description={cost.description}
+        date={cost.date}
+        amount={cost.amount}
+    />))
+    }
 return(
     <div>
         
     <Card className="costs">
         <CostsFilter year={selectedYear} onChangeYear={yearChangeHandler}/>
-        {filteredCosts.map((cost)=>(
-        <CostItem
-            key={cost.id}
-            description={cost.description}
-            date={cost.date}
-            amount={cost.amount}
-        />))}
+        {costsContent}
     </Card>
     </div>
 );
