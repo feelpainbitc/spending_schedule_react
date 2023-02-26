@@ -1,9 +1,8 @@
 import Costs from "./components/Costs";
 import NewCost from "./components/NewCost/NewCost";
+import React, {useState} from 'react'
 
-function App() {
-
-const costs=[
+const INITIAL_COSTS=[
   {
     id:'c1',
     date: new Date(2023,1,12),
@@ -31,9 +30,20 @@ const costs=[
 ];
 
 
+function App() {
+
+  const [costs,setCosts]=useState(INITIAL_COSTS);
+
+
+
+
 const addCostHandler=(cost)=>{
-  
-}
+  setCosts(
+    prevCosts=>{
+      return[cost,...prevCosts]
+    }
+  );
+};
 
   return (
     <div>
