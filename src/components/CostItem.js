@@ -17,7 +17,7 @@ function CostItem(props){
             <CostDate date={props.date}></CostDate>
             <div className='cost-item__description'>
             <h2>{props.description}</h2>
-            <div className='cost-item__description'>${props.amount}</div>
+            <div className='cost-item__price'>${props.amount}</div>
             </div>
             <button onClick={changeDescriptionHandler}>Изменить</button>
         </Card>
