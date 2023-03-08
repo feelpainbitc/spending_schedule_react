@@ -22,5 +22,6 @@
   }
   
   .new-cost__actions {
+    display: flex;
     text-align: left;
   }
